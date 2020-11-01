@@ -116,4 +116,8 @@ namespace JordyP2_Apl.UI.Consulta {
             this.Consulta = ((System.Windows.Controls.DataGrid)(target));
             return;
             }
-            this._co
+            this._contentLoaded = true;
+        }
+    }
+}
+

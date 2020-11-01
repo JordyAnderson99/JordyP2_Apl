@@ -5,32 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:JordyP2_Apl"
         mc:Ignorable="d"
-        Title="Menu Principal" Height="290" Width="350"  Icon="/Imagenes/Registro.png">
-    <Window.Foreground>
-        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-            <GradientStop Color="Black"/>
-            <GradientStop Color="White" Offset="1"/>
-        </LinearGradientBrush>
-    </Window.Foreground>
-    <Window.Background>
-        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-            <GradientStop Color="#FF0A4B51"/>
-            <GradientStop Color="#FF0091FF" Offset="1"/>
-        </LinearGradientBrush>
-    </Window.Background>
-
+        Title="Menu Principal" Height="290" Width="350"  >    
     <Grid>
         <StackPanel>
             <Menu Height = "20" VerticalAlignment="Top">
                 <MenuItem Header= "Registros">
-                    <MenuItem x:Name="RegistroProyecto" Header="Registro Proyecto"  ></MenuItem>
-                    <MenuItem.Icon>
-                        <Image Source="/Imagenes/Registro2.png" />
-                    </MenuItem.Icon>
+                    <MenuItem x:Name="Registro" Header="Registro"  ></MenuItem>                    
                      </MenuItem>
 
                 <MenuItem Header= "Consultas">
-                      <MenuItem x:Name="ConsultaProyecto" Header="Consulta de Ordenes"  ></MenuItem>
+                      <MenuItem x:Name="Consulta" Header="Consulta"  ></MenuItem>
                     </MenuItem>
             </Menu>
         </StackPanel>            
