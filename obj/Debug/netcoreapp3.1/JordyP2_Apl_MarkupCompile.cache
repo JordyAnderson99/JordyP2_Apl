@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-c:\Users\DELL\source\repos\JordyP2_Apl\obj\Debug\netcoreapp3.1\
+C:\Users\DELL\source\repos\JordyP2_Apl\obj\Debug\netcoreapp3.1\
 JordyP2_Apl
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
-c:\Users\DELL\source\repos\JordyP2_Apl\App.xaml
-21227592334
-81135367199
-5-1574067142
-216467307332
-MainWindow.xaml;UI\Registros\rProyecto.xaml;
+C:\Users\DELL\source\repos\JordyP2_Apl\App.xaml
+4-678049063
+81162573046
+112017102467
+216-512781098
+MainWindow.xaml;UI\Consultas\cProyecto.xaml;UI\Registros\rJugador.xaml;UI\Registros\rProyecto.xaml;
 
-True
+False
 

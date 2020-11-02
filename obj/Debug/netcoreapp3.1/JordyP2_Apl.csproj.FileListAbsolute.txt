@@ -71,3 +71,5 @@ C:\Users\DELL\source\repos\JordyP2_Apl\obj\Debug\netcoreapp3.1\UI\Registros\rPro
 C:\Users\DELL\source\repos\JordyP2_Apl\obj\Debug\netcoreapp3.1\UI\Registros\rProyecto.baml
 C:\Users\DELL\source\repos\JordyP2_Apl\obj\Debug\netcoreapp3.1\UI\Consultas\cProyecto.g.cs
 C:\Users\DELL\source\repos\JordyP2_Apl\obj\Debug\netcoreapp3.1\UI\Consultas\cProyecto.baml
+C:\Users\DELL\source\repos\JordyP2_Apl\obj\Debug\netcoreapp3.1\UI\Registros\rJugador.g.cs
+C:\Users\DELL\source\repos\JordyP2_Apl\obj\Debug\netcoreapp3.1\UI\Registros\rJugador.baml
