@@ -54,7 +54,7 @@ namespace JordyP2_Apl.BLL
 
             try
             {
-                contexto.Database.ExecuteSqlRaw($"Delete FROM MorasDetalle Where MoraId={proyectos.ProyectoId}");
+                contexto.Database.ExecuteSqlRaw($"Delete From ProyectoDetalle Where ProyectoId={proyectos.ProyectoId}");
 
                 foreach (var item in proyectos.Detalle)
                 {

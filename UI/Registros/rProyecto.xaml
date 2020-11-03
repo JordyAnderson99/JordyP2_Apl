@@ -27,20 +27,20 @@
             <TextBox x:Name = "DescripcionTextBox" Text ="{Binding Descripcion}" Width="160" Height="50" Margin="-110,-25,0,0"/>
 
             <StackPanel Orientation="Vertical" >
-                <GroupBox Header="Detalle Moras"  Margin="0,5,0,0" >
+                <GroupBox Header="Detalle de Proyectos"  Margin="0,5,0,0" >
                     <StackPanel>
                         
                         <!--Tipo Tarea-->
                         <Label Content = "Tipo Tarea" FontSize="15px" Margin="-390,10,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="91"/>
                         <ComboBox x:Name = "TipoTareaComboBox" SelectedValue ="{Binding TareaId}" Width="120" Height="25" Margin="-350,-5,0,0"/>
 
-                        <!--Tiempo(minutos)-->
-                        <Label Content = "Requerimiento de la tarea"  FontSize="15px" Margin="-20,-60,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="200" Height="25"/>
+                        <!--Requerimiento-->
+                        <Label Content = "Requerimiento de la tarea"  FontSize="15px" Margin="-20,-65,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="200" Height="25"/>
                         <TextBox x:Name = "RequerimientoTextBox" Text ="{Binding Requerimiento}" Width="190" Height="25" Margin="-20,-25,0,0"/>
 
 
                         <!--Tiempo(minutos)-->
-                        <Label Content = "Tiempo(minutos)"  FontSize="15px" Margin="300,-60,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="121" Height="25"/>
+                        <Label Content = "Tiempo(minutos)"  FontSize="15px" Margin="300,-65,1,1" FontFamily="SimSun-ExtB" FontStyle="Normal" Width="121" Height="25"/>
                         <TextBox x:Name = "TiempoTextBox" Text ="{Binding Cantidad}" Width="140" Height="25" Margin="330,-25,0,0"/>
 
                         

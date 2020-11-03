@@ -11,13 +11,13 @@
         <StackPanel Margin= "-120,20,-1,-1"  VerticalAlignment="Center" HorizontalAlignment="Center">
                         
             <!--Boton Buscar-->
-            <Button x:Name ="BuscarButton" Margin="680,-10,0,0" Width = "120" Height = "40" Content="   Buscar" />
+            <Button x:Name ="BuscarButton" Margin="680,-10,0,0" Width = "120" Height = "40" Content="   Buscar" Click="BuscarButton_Click"/>
             <Image Source= "/Imagenes/Buscar.png" Width="30" Height= "30" Margin="610,-40,0,0"/>
             
             <!-- Filtro -->
             <Label Content = "Filtro" Margin="130,-20,0,0"></Label>
             <ComboBox x:Name= "FiltroComboBox" Width= "100" Height= "30" Margin="-370,-30,0,0"> 
-            <ComboBoxItem Content ="Id"/>
+            <ComboBoxItem Content ="ProyectoId"/>
             <ComboBoxItem Content= "Descripcion"/>
             </ComboBox>
             

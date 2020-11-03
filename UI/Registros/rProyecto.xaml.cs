@@ -49,6 +49,14 @@ namespace JordyP2_Apl.UI.Registros
                 esValidado = false;
                 MessageBox.Show("Transaccion Fallida", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
+            if(DescripcionTextBox.Text.Trim() == String.Empty){
+                    MessageBox.Show("No puede dejar el campo Descripcion vacio", "Error", MessageBoxButton.OK , MessageBoxImage.Error);
+                   
+            }
+            else if(RequerimientoTextBox.Text == null){
+                    MessageBox.Show("No puede dejar el campo Tipo tarea  vacio", "Error", MessageBoxButton.OK , MessageBoxImage.Error);
+                   
+            }
 
             return esValidado;
         }
@@ -88,11 +96,10 @@ namespace JordyP2_Apl.UI.Registros
                 {
                     Limpiar();
                     MessageBox.Show("Transaccion Exitosa", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
-                }
+                }                
                 else
                     MessageBox.Show("Transaccion Errada", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
-
-                    //if()
+                    
             }
         }
         //Boton Eliminar
@@ -133,12 +140,13 @@ namespace JordyP2_Apl.UI.Registros
         //Boton de Eliminar Fila
         private void EliminarFilaButton_Click(object sender, RoutedEventArgs e)
         {
+            double total = Convert.ToDouble(TiempoTotalTextBox.Text);
             if (DetalleDataGrid.Items.Count >= 1 && DetalleDataGrid.SelectedIndex <= DetalleDataGrid.Items.Count - 1)
             {
                 var detalle = (ProyectoDetalle)DetalleDataGrid.SelectedItem;
-                    
-                    //proyectos.TiempoTotal = proyectos.TiempoTotal - (detalle.pro * (decimal)detalle.Cantidad);
-                proyectos.Detalle.RemoveAt(DetalleDataGrid.SelectedIndex);
+
+                proyectos.TiempoTotal = proyectos.TiempoTotal - detalle.Tiempo;                      
+                proyectos.Detalle.RemoveAt(DetalleDataGrid.SelectedIndex);               
                 Cargar();
             }
         }
