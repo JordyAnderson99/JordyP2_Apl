@@ -77,7 +77,7 @@
                 <StackPanel Orientation="Horizontal">
                     <!--Tiempo-->
                     <Label Content="Tiempo Total" Margin="330,15,0,0" FontSize="15px" FontFamily="SimSun-ExtB"/>
-                    <TextBox x:Name="TiempoTotalTextBox" Text= "{Binding Monto}" Height="25" Width="60" IsReadOnly="True" Margin="8,15,0,0"/>
+                    <TextBox x:Name="TiempoTotalTextBox" Text= "{Binding TiempoTotal}" Height="25" Width="60" IsReadOnly="True" Margin="8,15,0,0"/>
                 </StackPanel>
             </StackPanel>
 
