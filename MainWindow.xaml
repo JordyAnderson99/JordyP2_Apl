@@ -10,11 +10,11 @@
         <StackPanel>
             <Menu Height = "20" VerticalAlignment="Top">
                 <MenuItem Header= "Registros">
-                    <MenuItem x:Name="Registro" Header="Registro"  ></MenuItem>                    
+                    <MenuItem x:Name="RegistroProyectos" Header="Registro Proyectos" Click="RegistroProyectoButton_Click" ></MenuItem>                    
                      </MenuItem>
 
                 <MenuItem Header= "Consultas">
-                      <MenuItem x:Name="Consulta" Header="Consulta"  ></MenuItem>
+                      <MenuItem x:Name="ConsultaProyectos" Header="Consulta Proyectos"  Click="ConsultaProyectoButton_Click"></MenuItem>
                     </MenuItem>
             </Menu>
         </StackPanel>            

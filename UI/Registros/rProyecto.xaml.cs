@@ -23,9 +23,9 @@ namespace JordyP2_Apl.UI.Registros
             this.DataContext = proyectos;
 
             //ComboBox de Tipotarea
-            TareaIdComboBox.ItemsSource = TareasBLL.GetList(s => true);
-            TareaIdComboBox.SelectedValuePath = "TareaId";
-            TareaIdComboBox.DisplayMemberPath = "TipoTarea";
+            TipoTareaComboBox.ItemsSource = TareasBLL.GetList(s => true);
+            TipoTareaComboBox.SelectedValuePath = "TareaId";
+            TipoTareaComboBox.DisplayMemberPath = "TareaId";
            
         }
         // Funcion Cagar
@@ -44,7 +44,7 @@ namespace JordyP2_Apl.UI.Registros
         private bool Validar()
         {
             bool esValidado = true;
-            if (ProyectoIdTextBox.Text.Length == 0)
+            if (DescripcionTextBox.Text.Length == 0)
             {
                 esValidado = false;
                 MessageBox.Show("Transaccion Fallida", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
@@ -91,6 +91,8 @@ namespace JordyP2_Apl.UI.Registros
                 }
                 else
                     MessageBox.Show("Transaccion Errada", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+
+                    //if()
             }
         }
         //Boton Eliminar
@@ -107,6 +109,38 @@ namespace JordyP2_Apl.UI.Registros
             }
         }
 
-        
+        //Boton de Agregar Fila
+        private void AgregarFilaButton_Click(object sender, RoutedEventArgs e)
+        {
+            var filaDetalle = new ProyectoDetalle
+            {
+                ProyectoId = this.proyectos.ProyectoId,
+                TareaId = Convert.ToInt32(TipoTareaComboBox.SelectedValue.ToString()),
+                tipo = ((Tareas)TipoTareaComboBox.SelectedItem),
+                Requerimiento = (RequerimientoTextBox.Text),
+                Tiempo = Convert.ToSingle(TiempoTextBox.Text)
+            };
+            
+            proyectos.TiempoTotal += Convert.ToDouble(TiempoTextBox.Text.ToString());
+            
+            this.proyectos.Detalle.Add(filaDetalle);
+            Cargar();
+
+            TipoTareaComboBox.SelectedIndex = -1;
+            RequerimientoTextBox.Clear();
+            TiempoTextBox.Clear();
+        }
+        //Boton de Eliminar Fila
+        private void EliminarFilaButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (DetalleDataGrid.Items.Count >= 1 && DetalleDataGrid.SelectedIndex <= DetalleDataGrid.Items.Count - 1)
+            {
+                var detalle = (ProyectoDetalle)DetalleDataGrid.SelectedItem;
+                    
+                    //proyectos.TiempoTotal = proyectos.TiempoTotal - (detalle.pro * (decimal)detalle.Cantidad);
+                proyectos.Detalle.RemoveAt(DetalleDataGrid.SelectedIndex);
+                Cargar();
+            }
+        }
     }
 }

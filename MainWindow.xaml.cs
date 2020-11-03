@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using JordyP2_Apl.UI.Registros;
+using JordyP2_Apl.UI.Consulta;
 
 namespace JordyP2_Apl
 {
@@ -23,6 +25,16 @@ namespace JordyP2_Apl
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void RegistroProyectoButton_Click(object sender, RoutedEventArgs e){
+            rProyecto rProyecto = new rProyecto();
+            rProyecto.Show();
+        }
+
+        private void ConsultaProyectoButton_Click(object sender, RoutedEventArgs e){
+           cProyecto cProyecto = new cProyecto();
+            cProyecto.Show();
         }
     }
 }
